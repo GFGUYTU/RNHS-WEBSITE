@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <link rel="stylesheet" href="Events.css">
+    </head>
+    <body>
+        <nav>
+          <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a></li>
+            <li><a href="Strand.html">Strands</a></li>
+            <li><a href="Alma mater song.html">Alma mater Song</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="News.html">News</a></li>
+            
+        </ul>
+            <ul>
+                <li><a href="#">Rosales National High School Senior High</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Login Form.html">Login</a></li>
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        <div class="img">
+            <img src="https://i.ibb.co/KLSNDdG/logo-rnhs.png">
+            
+        </div>
+            
+        <h1><span>R</span>osales <span>N</span>ational <span>H</span>igh <span>S</span>chool</h1>
+        <h2><span>S</span>enior <span>H</span>igh</h2>
+        
+        <div class="events">
+            <h2>Recents Events 2024</h2>
+            <img src="Cheerdance.jpg">
+            <h1>Grade 12 PE Cheerdance</h1>
+        </div>
+
+        <script>
+            function showSidebar(){
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'flex'
+            }
+          
+            function hideSidebar(){
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'none'
+            }
+            
+               let slideIndex = 1;
+          showSlides(slideIndex);
+          
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+          </script>
+
+<div class="footer">
+  <div class="img">
+    <img src="https://i.ibb.co/KLSNDdG/logo-rnhs.png">
+  </div>
+  <h1>Copyright &copy 2024 All Rights Reserved By <a href="Webdeveloper.html">Jon Dreik U. Guton</a> </h1>
+  <h1>jondreikguton@gmail.com</h1>
+</div>
